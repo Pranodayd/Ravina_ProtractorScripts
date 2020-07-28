@@ -1,0 +1,22 @@
+{
+  "name": "protractorscripts",
+  "version": "1.0.0",
+  "description": "Its a project containing protractor scripts",
+  "main": "protractorconfig.js",
+  "bin": {
+    "protractorscripts": "protractorconfig.js"
+  },
+  "scripts": {
+    "test": "protractor bin/protractorconfig.js",
+    "pretest": "tsc && node ./node_modules/protractor/bin/webdriver-manager update"
+
+  },
+  "author": "Pranoday",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mocha": "^8.0.0",
+    "mocha": "^8.0.1",
+    "protractor": "^7.0.0",
+    "typescript": "^3.9.7"
+  }
+}
