@@ -6,7 +6,11 @@ describe('Check all Arithmetic operations', function() {
       
       browser.get('http://juliemr.github.io/protractor-demo/');
       element(by.model("first")).sendKeys("2");
-      browser.sleep(10000);  
+      element(by.model("second")).sendKeys("5");
+      element(by.cssContainingText("button[class='btn']","Go!")).click();
+      browser.sleep(10000); 
+
+   
     
     });
 
