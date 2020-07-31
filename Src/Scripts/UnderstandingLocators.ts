@@ -5,8 +5,9 @@ describe('Check all Arithmetic operations', function() {
     it('Addition testcase', function() {
       
       browser.get('http://juliemr.github.io/protractor-demo/');
-      element(by.model("first"));  
-      
+      element(by.model("first")).sendKeys("2");
+      browser.sleep(10000);  
+    
     });
 
     it('Subtraction testcase', function() {
