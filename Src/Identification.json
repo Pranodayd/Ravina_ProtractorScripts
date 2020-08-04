@@ -1,0 +1,24 @@
+{
+"Cards":{
+    
+"Part_Details_Card":
+    {
+     
+            "PartNo":"by.id(\"aaa\")",
+            "PartDescription":"by.id(\"aaa\")"
+    },
+
+"Production":
+{
+
+
+}
+
+},
+"Part_Summary":
+{
+
+    "PartNo":"by.id(\"aaa\")",
+    "Part_Description":"by.id(\"aaa\")"
+}
+}

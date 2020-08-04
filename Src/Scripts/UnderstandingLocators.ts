@@ -39,7 +39,7 @@ describe('Check all Arithmetic operations', function() {
       element(by.model("second")).sendKeys("2");
       element(by.cssContainingText("button[class='btn']", "Go!")).click();
       console.log(await element(by.tagName("h2")).getText());
-      console.log(await AllOptions[4].getAttribute("value"));
+      console.log(await AllOptions[3].getAttribute("value"));
       browser.sleep(10000);
 
       });
@@ -51,7 +51,7 @@ describe('Check all Arithmetic operations', function() {
         element(by.model("second")).sendKeys("2");
         element(by.cssContainingText("button[class='btn']", "Go!")).click();
         console.log(await element(by.tagName("h2")).getText());
-        console.log(await AllOptions[2].getAttribute("value"));
+        console.log(await AllOptions[1].getAttribute("value"));
         browser.sleep(10000);
 
 
