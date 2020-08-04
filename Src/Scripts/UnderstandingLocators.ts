@@ -1,4 +1,4 @@
-import {browser, element, by} from "protractor";
+import {browser, element, by, Button} from "protractor";
 //describe is SUITE of testcases
 describe('Check all Arithmetic operations', function() {
     //it is SINGLE testcase
@@ -25,12 +25,36 @@ describe('Check all Arithmetic operations', function() {
       AllOptions[4].click();
       
       element(by.model("second")).sendKeys("2");
-      
-      element(by.cssContainingText("button[class='btn']","Go!")).click();
+       element(by.cssContainingText("button[class='btn']","Go!")).click();
       console.log(await element(by.tagName("h2")).getText());
       console.log(await AllOptions[4].getAttribute("value"));
       browser.sleep(10000);  
       });
 
+      it('Multiplication testcase', async function(){
+      element(by.model("first")).sendKeys("6");
+      let AllOptions=await element.all(by.options("value for (key, value) in operators"));
+      console.log("Number of Operators "+AllOptions.length)
+      AllOptions[3].click();
+      element(by.model("second")).sendKeys("2");
+      element(by.cssContainingText("button[class='btn']", "Go!")).click();
+      console.log(await element(by.tagName("h2")).getText());
+      console.log(await AllOptions[4].getAttribute("value"));
+      browser.sleep(10000);
+
+      });
+      it('Division testcase', async function(){
+        element(by.model("first")).sendKeys("6");
+        let AllOptions=await element.all(by.options("value for (key, value) in operators"));
+        console.log("Number of Operators "+AllOptions.length)
+        AllOptions[1].click();
+        element(by.model("second")).sendKeys("2");
+        element(by.cssContainingText("button[class='btn']", "Go!")).click();
+        console.log(await element(by.tagName("h2")).getText());
+        console.log(await AllOptions[2].getAttribute("value"));
+        browser.sleep(10000);
+
+
+
   });
-  
+});
