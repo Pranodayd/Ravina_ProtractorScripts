@@ -57,4 +57,19 @@ describe('Check all Arithmetic operations', function() {
 
 
   });
+
+  it('Modulo testcase', async function(){
+    element(by.model("first")).sendKeys("3");
+    let AllOptions=await element.all(by.options("value for (key, value) in operators"));
+    console.log("Number of Operators "+AllOptions.length)
+    AllOptions[2].click();
+    element(by.model("second")).sendKeys("2");
+    element(by.cssContainingText("button[class='btn']", "Go!")).click();
+    console.log(await element(by.tagName("h2")).getText());
+    console.log(await AllOptions[2].getAttribute("value"));
+    browser.sleep(10000);
+
+
+
+});
 });
