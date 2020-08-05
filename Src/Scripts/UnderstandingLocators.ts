@@ -72,4 +72,23 @@ describe('Check all Arithmetic operations', function() {
 
 
 });
+
+it('Fetching Addition result from Table testcase', async function() {
+      
+        
+  element(by.model("first")).sendKeys("5");
+  let AllOptions=await element.all(by.options("value for (key, value) in operators"));
+  console.log("Number of Operators "+AllOptions.length)
+  AllOptions[0].click();
+  
+  element(by.model("second")).sendKeys("2");
+   element(by.cssContainingText("button[class='btn']","Go!")).click();
+   let resultelement=element(by.className("table")).element(by.xpath("./descendant::tr[2]/descendant::td[3]"));
+   
+   console.log("Result from Table : "+await resultelement.getText());
+
+
+   browser.sleep(10000);  
+  });
+
 });
